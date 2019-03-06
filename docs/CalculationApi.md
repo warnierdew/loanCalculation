@@ -9,7 +9,7 @@ Method | HTTP request | Description
 
 <a name="findCalculationsByStatus"></a>
 # **findCalculationsByStatus**
-> Object findCalculationsByStatus(body)
+> CalculationResponse findCalculationsByStatus(body)
 
 Calculations Swagger
 
@@ -25,7 +25,7 @@ Calculate interest with montant, duree and taux
 CalculationApi apiInstance = new CalculationApi();
 CalculationRequest body = new CalculationRequest(); // CalculationRequest | Status values that need to be considered for filter
 try {
-    Object result = apiInstance.findCalculationsByStatus(body);
+    CalculationResponse result = apiInstance.findCalculationsByStatus(body);
     System.out.println(result);
 } catch (ApiException e) {
     System.err.println("Exception when calling CalculationApi#findCalculationsByStatus");
@@ -41,7 +41,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-**Object**
+[**CalculationResponse**](CalculationResponse.md)
 
 ### Authorization
 

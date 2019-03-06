@@ -3,6 +3,7 @@ package eu.eisti.calculation.client.api;
 import eu.eisti.calculation.client.invoker.ApiClient;
 
 import eu.eisti.calculation.client.model.CalculationRequest;
+import eu.eisti.calculation.client.model.CalculationResponse;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -23,7 +24,7 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 
-@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-06T15:45:21.385+01:00")
+@javax.annotation.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2019-03-06T16:23:24.779+01:00")
 @Component("eu.eisti.calculation.client.api.CalculationApi")
 public class CalculationApi {
     private ApiClient apiClient;
@@ -51,10 +52,10 @@ public class CalculationApi {
      * <p><b>200</b> - successful operation
      * <p><b>400</b> - Invalid status value
      * @param body Status values that need to be considered for filter
-     * @return Object
+     * @return CalculationResponse
      * @throws RestClientException if an error occurs while attempting to invoke the API
      */
-    public Object findCalculationsByStatus(CalculationRequest body) throws RestClientException {
+    public CalculationResponse findCalculationsByStatus(CalculationRequest body) throws RestClientException {
         Object postBody = body;
         
         // verify the required parameter 'body' is set
@@ -77,7 +78,7 @@ public class CalculationApi {
 
         String[] authNames = new String[] {  };
 
-        ParameterizedTypeReference<Object> returnType = new ParameterizedTypeReference<Object>() {};
+        ParameterizedTypeReference<CalculationResponse> returnType = new ParameterizedTypeReference<CalculationResponse>() {};
         return apiClient.invokeAPI(path, HttpMethod.POST, queryParams, postBody, headerParams, formParams, accept, contentType, authNames, returnType);
     }
 }

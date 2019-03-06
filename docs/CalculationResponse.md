@@ -4,7 +4,8 @@
 ## Properties
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**resultat** | **Long** |  |  [optional]
+**instanmonth** | **Long** |  |  [optional]
+**totalcost** | **Long** |  |  [optional]
 
 
 
